@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 369
+  rpc_config:
+    url: https://rpc.pulsechain.com
+  start_block: 0
+  contracts:
+  - name: access
+    address:
+    - 0xC53Fe22Be4386F7856648FC663d504acD0725960
+    handler: src/EventHandlers.ts
+    events:
+    - event: RoleGranted(address indexed account, uint8 role)
+    - event: RoleRevoked(address indexed account, uint8 role)
+rollback_on_reorg: false

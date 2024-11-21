@@ -1,0 +1,12 @@
+type Access_RoleGranted {
+  id: ID!
+  account: String!
+  role: BigInt!
+}
+
+type Access_RoleRevoked {
+  id: ID!
+  account: String!
+  role: BigInt!
+}
+
