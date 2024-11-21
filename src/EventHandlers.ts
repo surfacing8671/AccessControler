@@ -8,6 +8,7 @@ import {
 } from "generated";
 
 
+
 Access.RoleGranted.handler(async ({ event, context }) => {
   const entity: Access_RoleGranted = {
     id: `${event.chainId}_${event.block.number}_${event.logIndex}`,
